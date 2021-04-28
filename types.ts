@@ -11,3 +11,14 @@ export type PropertyItem = {
 };
 
 export type PropertyList = PropertyItem[];
+
+
+
+
+
+
+
+export type PropertyCard = Pick<
+  PropertyItem,
+  'superHost' | 'type' | 'beds' | 'rating' | 'title' | 'photo'
+>;
