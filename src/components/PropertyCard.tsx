@@ -19,17 +19,17 @@ const PropertyCard = ({
           alt={title}
         />
       </section>
-        <section className="flex justify-between p-4">
+        <section className="flex flex-col justify-between p-4">
           {superHost && (
-            <span className="whitespace-nowrap mr-2 p-2 border rounded-2xl">
+            <span className="text-sm md:text-base font-semibold font-secondary text-center mb-4 p-1 md:p-2 bg-green-900 text-white rounded-2xl self-center w-full">
               Super Host
             </span>
           )}
-          <span className="w-full flex justify-between flex-wrap items-center">
+          <span className="w-full text-sm md:text-base flex justify-between flex-wrap items-center">
             <span className="font-medium text-gray-500">
               {type} · {beds} beds
             </span>
-            <span>
+            <span className="flex items-center text-xs md:text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="text-green-600 h-5 w-5 mr-1 inline-block"
@@ -42,7 +42,7 @@ const PropertyCard = ({
             </span>
           </span>
         </section>
-        <h4 className="pl-4 font-semibold">{title}</h4>
+        <h4 className="px-4 text-xs md:text-base font-semibold">{title}</h4>
     </article>
   );
 };

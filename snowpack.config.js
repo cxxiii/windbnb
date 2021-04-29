@@ -4,9 +4,10 @@ module.exports = {
     assets: '/',
   },
   plugins: [
+    ['@snowpack/plugin-sass'],
     ['@snowpack/plugin-react-refresh'],
     ['@snowpack/plugin-typescript'],
-    ['@snowpack/plugin-postcss'],
+    ['@snowpack/plugin-postcss', { input: ['.css', '.scss'] }],
     ['@jadex/snowpack-plugin-tailwindcss-jit'],
   ],
   optimize: {
