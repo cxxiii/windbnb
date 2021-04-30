@@ -20,7 +20,10 @@ const Header = ({ openFilterDrawer }: HeaderProps) => {
           Finbnb
         </h1>
       </span>
-      <button className="p-4 rounded-lg shadow-xl" onClick={openFilterDrawer}>
+      <button
+        className="transform hover:scale-105 hover:bg-green-900 hover:text-white transition duration-200 p-4 rounded-lg shadow-xl hover:shadow-inner"
+        onClick={openFilterDrawer}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-8 w-8"

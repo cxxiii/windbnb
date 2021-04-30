@@ -11,8 +11,8 @@ import Main from './components/Main';
 const App = () => {
   const [showFilter, setShowFilter] = useState<boolean>(false);
   const [cityFilter, setCityFilter] = useState<string>('');
-  const [guestsFilter, setGuestsFilter] = useState<null | number>(null);
-  const propertyList = usePropertyList(cityFilter, Number(guestsFilter));
+  const [guestsFilter, setGuestsFilter] = useState<number>(2);
+  const propertyList = usePropertyList(cityFilter, guestsFilter);
 
   return (
     <Page>
@@ -22,7 +22,7 @@ const App = () => {
           filterByCity={(e: React.ChangeEvent<HTMLInputElement>) =>
             setCityFilter(e.target.value)
           }
-          guestsFilter={Number(guestsFilter)}
+          guestsFilter={guestsFilter}
           filterByGuests={(e: React.ChangeEvent<HTMLInputElement>) =>
             setGuestsFilter(Number(e.target.value))
           }

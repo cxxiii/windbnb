@@ -33,7 +33,7 @@ const FilterMenu = ({cityFilter, filterByCity, guestsFilter, filterByGuests }: F
             <input
               id="guestInput"
               type="number"
-    className="mt-0 block text-lg md:text-3xl border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black w-1/5"
+    className="text-center mt-0 block text-lg md:text-3xl border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black w-1/5"
               value={Number(guestsFilter)}
               min={0}
               onChange={filterByGuests}

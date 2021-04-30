@@ -6,7 +6,7 @@ export type PropertyItem = {
   rating: number;
   maxGuests: number;
   type: string;
-  beds: number;
+  beds: number | null;
   photo: string;
 };
 
