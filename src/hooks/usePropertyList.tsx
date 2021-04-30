@@ -9,11 +9,20 @@ export default function usePropertyList(
   guestsFilter: number
 ): PropertyList | null {
   const [propertyList, setPropertyList] = useState<null | PropertyList>(null);
-
   let initLoad = false;
+
   async function getProperties(): Promise<void> {
     const raw = await fetch('/stays.json');
     let properties = await raw.json();
+
+    if (guestsFilter) {
+      properties = properties.filter(
+        (p: PropertyItem) => p.maxGuests >= guestsFilter
+      );
+      if (properties.length && !cache[guestsFilter]) {
+        cache[guestsFilter] = properties;
+      }
+    }
 
     if (cityFilter && guestsFilter) {
       properties = properties.filter(

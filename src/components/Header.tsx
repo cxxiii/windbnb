@@ -6,7 +6,7 @@ type HeaderProps = {
 
 const Header = ({ openFilterDrawer }: HeaderProps) => {
   return (
-    <header className="flex flex-col md:flex-row justify-around md:justify-between items-center mt-8 md:mt-4 mb-8">
+    <header className="flex flex-col md:flex-row justify-around md:justify-between items-center mt-8 mb-12">
       <span className="flex items-center mb-4 md:mb-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"

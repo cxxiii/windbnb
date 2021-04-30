@@ -9,13 +9,13 @@ type PropertiesProps = {
 const Properties = ({propertyList}: PropertiesProps) => {
   return (
     <main>
-      <span className="mb-4 flex justify-between items-center">
+      <span className="mb-6 flex justify-between items-center">
         <h2 className="font-semibold text-lg">Stays in Finland</h2>
         {propertyList && (
           <h3 className="font-medium">{propertyList.length} stays</h3>
         )}
       </span>
-      <section className="grid md:grid-cols-3 items-start gap-x-12 gap-y-10 md:gap-y-14">
+      <section className="grid md:grid-cols-3 place-items-center gap-x-12 gap-y-10 md:gap-y-14">
         {propertyList &&
           propertyList.map((property: PropCardTypes) => (
             <PropertyCard
