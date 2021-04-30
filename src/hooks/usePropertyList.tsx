@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { PropertyItem, PropertyList } from '../../types';
 import debounce from 'lodash.debounce';
-// import stays from '../../assets/stays.json'
 
 const cache: Record<string, PropertyList> = {};
 
@@ -13,8 +12,7 @@ export default function usePropertyList(
 
   let initLoad = false;
   async function getProperties(): Promise<void> {
-    const raw = await fetch('/assets/stays.json');
-    console.log(raw)
+    const raw = await fetch('/stays.json');
     let properties = await raw.json();
 
     if (cityFilter && guestsFilter) {
