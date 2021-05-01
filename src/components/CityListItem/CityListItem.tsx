@@ -1,14 +1,10 @@
 import * as React from 'react';
+import styles from './CityListItem.module.scss'
 
-type CityLI = {
-  city: string;
-};
-
-const CityListItem = ({ city }: CityLI) => (
-  <li className="flex items-center">
+const CityListItem = ({ city }: {city: string}) => (
+  <li className={styles.CityListItem}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5 mr-1"
       viewBox="0 0 20 20"
       fill="currentColor"
     >

@@ -1,0 +1,84 @@
+.FilterMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &__cityFilter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    & input {
+      display: block;
+      margin-top: 0;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      padding: 0 0.125rem;
+      border-width: 0px;
+      border-bottom-width: 2px;
+      border-color: var(--light-gray);
+
+      &:focus {
+        border-color: var(--black);
+      }
+
+      @media (min-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      height: 13rem;
+      place-content: space-evenly;
+    }
+  }
+
+  &__guestsFilter {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+
+    & label {
+      margin-bottom: 0.5rem;
+      color: var(--dark-gray);
+    }
+
+    & input {
+      display: block;
+      width: 20%;
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      border-width: 0px;
+      border-bottom-width: 2px;
+      border-color: var(--light-gray);
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &:focus {
+        border-color: var(--black);
+      }
+
+      @media (min-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

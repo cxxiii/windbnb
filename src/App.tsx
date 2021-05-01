@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import usePropertyList from './hooks/usePropertyList';
-import Drawer from './components/Drawer';
-import DrawerBackdrop from './components/DrawerBackdrop';
-import FilterMenu from './components/FilterMenu';
-import Properties from './components/Properties';
-import Header from './components/Header';
-import Page from './components/Page';
-import Main from './components/Main';
+import Drawer from './components/Drawer/Drawer';
+import DrawerBackdrop from './components/DrawerBackdrop/DrawerBackdrop';
+import FilterMenu from './components/FilterMenu/FilterMenu';
+import Properties from './components/Properties/Properties';
+import Header from './components/Header/Header';
+import Page from './components/Page/Page';
+import Main from './components/Main/Main';
 
 const App = () => {
   const [showFilter, setShowFilter] = useState<boolean>(false);

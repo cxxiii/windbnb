@@ -1,0 +1,11 @@
+.CityListItem {
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: var(--green);
+    height: 1.25rem;
+    width: 1.26rem;
+    margin-right: 0.25rem;
+  }
+}

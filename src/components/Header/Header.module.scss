@@ -1,0 +1,58 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    & svg {
+      color: var(--green);
+      height: 4rem;
+      width: 4rem;
+    }
+
+    & h1 {
+      display: inline-block;
+      font-family: var(--font-secondary);
+      font-size: 3.75rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.05em;
+
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__openFiltersBtn {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-lg);
+    transition: all 0.2s;
+
+    & svg {
+      height: 2rem;
+      width: 2rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: var(--green);
+      color: #fff;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Montserrat:wght@500;600;700&display=swap');
+
+:root {
+  --font-secondary: 'Open Sans', sans-serif;
+  --text-shadow-sm: rgba(0, 0, 0, 0.1) 0 0 2px;
+  --text-shadow-md: rgba(0, 0, 0, 0.1) 0 0 4px;
+  --text-shadow-lg: rgba(0, 0, 0, 0.1) 0 0 6px;
+  --black: #111827;
+  --light-gray: #e5e7eb;
+  --gray: #6b7280;
+  --dark-gray: #4b5563;
+  --light-green: #059669;
+  --green: #064e3b;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --box-shadow-lg: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  color: #111827;
+  text-shadow: var(--text-shadow-sm);
+  -webkit-font-smoothing: auto;
+  -moz-box-font-smoothing: auto;
+}
+
