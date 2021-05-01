@@ -37,7 +37,6 @@
     "vite-tsconfig-paths": "^3.3.10"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.3.2",
     "autoprefixer": "latest",
     "classnames": "^2.3.1",
     "lodash.debounce": "^4.0.8",

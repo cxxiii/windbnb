@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url('https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Montserrat:wght@500;600;700&display=swap');
 
 :root {
@@ -16,6 +16,17 @@
   --box-shadow-lg: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
 body {
   font-family: Montserrat, sans-serif;
   color: #111827;
@@ -23,4 +34,3 @@ body {
   -webkit-font-smoothing: auto;
   -moz-box-font-smoothing: auto;
 }
-
