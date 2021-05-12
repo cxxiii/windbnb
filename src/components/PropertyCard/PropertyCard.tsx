@@ -22,10 +22,14 @@ const PropertyCard = ({
           </span>
         )}
         <span className={styles.PropertyCard__infoText___detailLine}>
-          <span className={styles.PropertyCard__infoText___detailLine____details}>
-            {type} · {beds} beds
+          <span
+            className={styles.PropertyCard__infoText___detailLine____details}
+          >
+            {type} {beds && `· ${beds} ${beds > 1 ? 'beds' : 'bed'}`}
           </span>
-          <span className={styles.PropertyCard__infoText___detailLine____rating}>
+          <span
+            className={styles.PropertyCard__infoText___detailLine____rating}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
