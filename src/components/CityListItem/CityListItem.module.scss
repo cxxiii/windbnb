@@ -1,6 +1,12 @@
 .CityListItem {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   svg {
     color: var(--green);

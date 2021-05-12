@@ -1,10 +1,11 @@
 import * as React from 'react';
 import CityListItem from '../CityListItem/CityListItem';
-import styles from './FilterMenu.module.scss'
+import styles from './FilterMenu.module.scss';
 
 type FilterMenuProps = {
   cityFilter: string;
   filterByCity: React.ChangeEventHandler;
+  filterByCityLI: Function;
   guestsFilter: number;
   filterByGuests: React.ChangeEventHandler;
 };
@@ -12,6 +13,7 @@ type FilterMenuProps = {
 const FilterMenu = ({
   cityFilter,
   filterByCity,
+  filterByCityLI,
   guestsFilter,
   filterByGuests,
 }: FilterMenuProps) => {
@@ -25,16 +27,26 @@ const FilterMenu = ({
           onChange={filterByCity}
         />
         <ul>
-          <CityListItem city="Helsinki, Finland" />
-          <CityListItem city="Turku, Finland" />
-          <CityListItem city="Oulu, Finland" />
-          <CityListItem city="Vaasa, Finland" />
+          <CityListItem
+            onClick={() => filterByCityLI('Helsinki')}
+            city="Helsinki, Finland"
+          />
+          <CityListItem
+            onClick={() => filterByCityLI('Turku')}
+            city="Turku, Finland"
+          />
+          <CityListItem
+            onClick={() => filterByCityLI('Oulu')}
+            city="Oulu, Finland"
+          />
+          <CityListItem
+            onClick={() => filterByCityLI('Vaasa')}
+            city="Vaasa, Finland"
+          />
         </ul>
       </section>
       <section className={styles.FilterMenu__guestsFilter}>
-        <label htmlFor="guestInput">
-          Number of guests
-        </label>
+        <label htmlFor="guestInput">Number of guests</label>
         <input
           id="guestInput"
           type="number"

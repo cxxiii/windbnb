@@ -1,8 +1,14 @@
 import * as React from 'react';
-import styles from './CityListItem.module.scss'
+import styles from './CityListItem.module.scss';
 
-const CityListItem = ({ city }: {city: string}) => (
-  <li className={styles.CityListItem}>
+const CityListItem = ({
+  city,
+  onClick,
+}: {
+  city: string;
+  onClick?: React.MouseEventHandler;
+}) => (
+  <li onClick={onClick} className={styles.CityListItem}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"

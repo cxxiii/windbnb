@@ -22,6 +22,7 @@ const App = () => {
           filterByCity={(e: React.ChangeEvent<HTMLInputElement>) =>
             setCityFilter(e.target.value)
           }
+          filterByCityLI={(city: string) => setCityFilter(city)}
           guestsFilter={guestsFilter}
           filterByGuests={(e: React.ChangeEvent<HTMLInputElement>) =>
             setGuestsFilter(Number(e.target.value))
